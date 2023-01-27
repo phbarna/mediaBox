@@ -5,11 +5,11 @@
 To run just type:
 
 ```
-ansible-playbook kodi-box.yml
+ansible-playbook media-box.yml
 ```
 
 To remove just type:
 
 ```
-ansible-playbook rm-kodi-box.yml
+ansible-playbook rm-media-box.yml
 ```
