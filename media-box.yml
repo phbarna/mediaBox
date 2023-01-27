@@ -6,9 +6,9 @@
   vars: 
     presentOrAbsent:  present
   roles:
-    - samba
-    - apt
-    - resolv
-    - kodi
+    # - samba
+    # - apt
+    # - resolv
+    # - kodi
     - vpn
 
