@@ -1,0 +1,4 @@
+---
+# tasks file for roles/kodi
+- include_tasks: copyService.yml
+- include_tasks: runService.yml

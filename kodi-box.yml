@@ -1,0 +1,14 @@
+---
+- name: Install all on media box
+  hosts: localhost
+  connection: local 
+  remote_user: pi
+  vars: 
+    presentOrAbsent:  present
+  roles:
+    - samba
+    - apt
+    - resolv
+    - kodi
+    - vpn
+

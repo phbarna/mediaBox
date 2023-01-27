@@ -1,0 +1,5 @@
+  - name: add ipvanish script
+    action: shell echo sudo openvpn --config "{{ vpnConfigDir }}"/\$1>~/bin/ipvanish && chmod +x ~/bin/ipvanish
+  - name: set up ipvanish dns
+    become: true
+    action: shell echo '#Using ipvanish dns\ndomain home\nnameserver 198.18.0.1\nnameserver 198.18.0.2\nnameserver 192.168.1.254'>/etc/resolv.conf

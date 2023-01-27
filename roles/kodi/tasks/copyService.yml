@@ -1,0 +1,4 @@
+- name: Transfer the kodi file with permissions
+  become: true
+  copy: src=kodi.service dest=/etc/systemd/system/kodi.service mode=644
+

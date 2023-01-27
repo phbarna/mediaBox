@@ -1,0 +1,9 @@
+# tasks file for git_clone
+- name: Transfer the resolv script with permissions
+  copy: src=resolv dest=~/bin/resolv mode=500
+- name: Creating a symlink
+  become: true
+  ansible.builtin.file:
+    src: /home/pi/bin/resolv
+    dest: /usr/local/bin/resolv
+    state: link

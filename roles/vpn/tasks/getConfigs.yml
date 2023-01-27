@@ -1,0 +1,6 @@
+- name: Download openvpn config files
+  become: true
+  ignore_errors: true
+  action: shell wget https://configs.ipvanish.com/simpleconf/configs.zip
+- name: mkdir and unzips
+  action: shell mkdir {{ vpnConfigDir }} && mv configs.zip {{ vpnConfigDir }} && cd {{ vpnConfigDir }} && unzip configs.zip && rm configs.zip

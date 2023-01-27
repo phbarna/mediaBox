@@ -1,0 +1,4 @@
+---
+# tasks file for roles/vpn
+- include_tasks: addScript.yml
+- include_tasks: getConfigs.yml

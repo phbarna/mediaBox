@@ -1,0 +1,6 @@
+- name: start kodi service
+  become: true
+  ansible.builtin.service:
+    name: kodi
+    state: started
+    enabled: true

@@ -1,0 +1,6 @@
+- name: resolv.conf service
+  become: true
+  ansible.builtin.service:
+    name: dhcpcd
+    state: restarted
+    enabled: true

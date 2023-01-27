@@ -1,0 +1,12 @@
+---
+# tasks file for samba
+- name: Transfer the smb conf file with permissions
+  become: true
+  copy: src=smb.conf dest=/etc/samba/smb.conf mode=644
+- name: Creates shared folder
+  become: true
+  file:
+    path: /share
+    state: directory
+    mode: 0777
+    recurse: yes

@@ -1,0 +1,14 @@
+---
+- name: Rm kodi and all on media box
+  hosts: localhost
+  connection: local 
+  remote_user: pi
+  vars: 
+    presentOrAbsent:  absent
+    vpnConfigDir: ~/vpnconfig
+  roles:
+    - apt
+    - remove
+
+
+          

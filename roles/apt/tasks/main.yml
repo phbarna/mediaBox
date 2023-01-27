@@ -1,0 +1,26 @@
+---
+# tasks file installing / uninstalling apps
+- name: Ansible/uninstall kodi "{{ presentOrAbsent }}""
+  become: true
+  apt:
+    name: kodi
+    state:  "{{ presentOrAbsent }}"
+    update_cache: true
+- name: install/uninstall deluge  "{{ presentOrAbsent }}""
+  become: true
+  apt:
+    name: deluge
+    state: "{{ presentOrAbsent }}"
+    update_cache: true
+- name: Install/uninstall open vpn  "{{ presentOrAbsent }}""
+  become: true
+  apt:
+    name: openvpn
+    state: "{{ presentOrAbsent }}"
+    update_cache: true
+- name: Install/uninstall samba service "{{ presentOrAbsent }}""
+  become: true
+  apt:
+    name: samba
+    state: "{{ presentOrAbsent }}"
+    update_cache: true
